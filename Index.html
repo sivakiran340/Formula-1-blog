@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APEX 2026 | Formula 1 Drivers, Teams & New Era Hub</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        carbon: '#0c0d0e',
+                        surface: '#15171a',
+                        surfaceLight: '#1f2227',
+                        borderDim: '#2a2e36',
+                        f1Red: '#ff1801',
+                        ferrariRed: '#dc0000',
+                        audiSilver: '#d1d5db',
+                        neonTeal: '#00d2be',
+                        papaya: '#ff8000',
+                        rbBlue: '#121f45',
+                        amGreen: '#229971',
+                    },
+                    fontFamily: {
+                        f1: ['Orbitron', 'sans-serif'],
+                        racing: ['Rajdhani', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Carbon Fiber Texture Simulation */
+        .carbon-pattern {
+            background-color: #0c0d0e;
+            background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 0);
+            background-size: 20px 20px;
+        }
+
+        .carbon-weave {
+            background: linear-gradient(135deg, #121316 25%, transparent 25%) -20px 0,
+                        linear-gradient(225deg, #121316 25%, transparent 25%) -20px 0,
+                        linear-gradient(315deg, #121316 25%, transparent 25%),
+                        linear-gradient(45deg, #121316 25%, transparent 25%);
+            background-size: 40px 40px;
+            background-color: #0b0c0e;
+        }
+
+        /* Speed line decoration */
+        .speed-border {
+            position: relative;
+        }
+        .speed-border::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 48px;
+            height: 3px;
+            background: #ff1801;
+            box-shadow: 0 0 10px rgba(255, 24, 1, 0.8);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0c0d0e;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2a2e36;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ff1801;
+        }
+    </style>
+</head>
+<body class="bg-carbon text-gray-200 font-sans antialiased selection:bg-f1Red selection:text-white">
+
+    <!-- Top Navigation Bar -->
+    <header class="sticky top-0 z-40 bg-surface/90 backdrop-blur-md border-b border-borderDim">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 bg-gradient-to-tr from-f1Red to-orange-600 rounded-lg flex items-center justify-center shadow-lg shadow-f1Red/30 group-hover:scale-105 transition-transform">
+                    <span class="font-f1 text-white font-black text-xl italic tracking-tighter">26</span>
+                </div>
+                <div>
+                    <span class="font-f1 text-xl font-bold tracking-wider text-white">APEX<span class="text-f1Red">.F1</span></span>
+                    <span class="block text-[10px] tracking-widest text-gray-400 font-racing uppercase">2026 Season Grid & Technical Hub</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center gap-8 font-racing text-lg font-semibold tracking-wide">
+                <a href="#grid" class="hover:text-f1Red transition-colors flex items-center gap-2"><i class="fa-solid fa-users-gear text-sm"></i> Teams & Drivers</a>
+                <a href="#regulations" class="hover:text-f1Red transition-colors flex items-center gap-2"><i class="fa-solid fa-bolt text-sm"></i> 2026 Tech Specs</a>
+                <a href="#articles" class="hover:text-f1Red transition-colors flex items-center gap-2"><i class="fa-solid fa-newspaper text-sm"></i> Technical Blog</a>
+            </nav>
+
+            <!-- Quick Action / Live Status -->
+            <div class="flex items-center gap-3">
+                <span class="hidden sm:inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-400 text-xs font-mono">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                    ERA: ACTIVE AERO & 100% BIOFUEL
+                </span>
+                <a href="#grid" class="bg-f1Red hover:bg-red-700 text-white font-racing px-4 py-2 rounded-lg text-sm font-bold tracking-wider uppercase transition-all shadow-md shadow-f1Red/20 hover:shadow-f1Red/50">
+                    Explore Grid
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner: The Dawn of the 2026 Formula 1 Era -->
+    <section class="relative carbon-weave overflow-hidden border-b border-borderDim py-20 lg:py-28">
+        <!-- Background Glows -->
+        <div class="absolute -top-40 -left-40 w-96 h-96 bg-f1Red/15 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-40 right-0 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Hero Left: Content -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface border border-borderDim text-f1Red font-racing font-bold text-sm uppercase tracking-wider">
+                        <i class="fa-solid fa-flag-checkered"></i> The Next Formula 1 Revolution
+                    </div>
+                    <h1 class="font-f1 text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-none uppercase">
+                        2026 Grid: <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-f1Red via-orange-400 to-yellow-300">
+                            New Kings, New Engines
+                        </span>
+                    </h1>
+                    <p class="text-gray-300 text-base sm:text-lg leading-relaxed font-normal max-w-2xl">
+                        Formula 1 resets the battlefield in 2026. Audi arrives on the grid, Red Bull partners with Ford Powertrains, and Lewis Hamilton embarks on his Ferrari legacy alongside Charles Leclerc. With active aerodynamics, 50% electric power split, and 100% sustainable fuels, the championship enters an unprecedented epoch.
+                    </p>
+
+                    <!-- Key Stat Highlights -->
+                    <div class="grid grid-cols-3 gap-4 pt-4 border-t border-borderDim/70">
+                        <div class="bg-surface/70 border border-borderDim p-4 rounded-xl">
+                            <span class="block font-f1 text-2xl sm:text-3xl font-extrabold text-white">350<span class="text-f1Red text-lg font-bold">kW</span></span>
+                            <span class="text-xs text-gray-400 uppercase tracking-wider font-racing font-semibold">MGU-K Electric Power (~470 bhp)</span>
+                        </div>
+                        <div class="bg-surface/70 border border-borderDim p-4 rounded-xl">
+                            <span class="block font-f1 text-2xl sm:text-3xl font-extrabold text-emerald-400">100<span class="text-emerald-400 text-lg">%</span></span>
+                            <span class="text-xs text-gray-400 uppercase tracking-wider font-racing font-semibold">Advanced Sustainable Fuel</span>
+                        </div>
+                        <div class="bg-surface/70 border border-borderDim p-4 rounded-xl">
+                            <span class="block font-f1 text-2xl sm:text-3xl font-extrabold text-cyan-400">X/Z</span>
+                            <span class="text-xs text-gray-400 uppercase tracking-wider font-racing font-semibold">Active Aerodynamic Modes</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-wrap gap-4 pt-2">
+                        <a href="#grid" class="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl bg-f1Red text-white font-racing font-bold text-lg tracking-wider hover:bg-red-700 transition shadow-lg shadow-f1Red/30">
+                            <i class="fa-solid fa-helmet-un"></i> Inspect 2026 Teams
+                        </a>
+                        <a href="#regulations" class="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl bg-surfaceLight border border-borderDim text-gray-200 font-racing font-bold text-lg tracking-wider hover:bg-surface hover:text-white transition">
+                            <i class="fa-solid fa-sliders"></i> Engine Architecture Guide
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Right: Dynamic Spotlight Card -->
+                <div class="lg:col-span-5">
+                    <div class="relative rounded-2xl p-1 bg-gradient-to-br from-f1Red via-borderDim to-surface shadow-2xl">
+                        <div class="bg-surface rounded-xl p-6 relative overflow-hidden">
+                            <div class="flex justify-between items-start mb-4">
+                                <span class="bg-f1Red/20 text-f1Red border border-f1Red/40 text-xs font-racing font-bold uppercase tracking-wider px-2.5 py-1 rounded">
+                                    Headlining Switch
+                                </span>
+                                <span class="text-gray-400 text-xs font-mono font-medium">Scuderia Ferrari HP</span>
+                            </div>
+
+                            <!-- Driver Graphic Mockup -->
+                            <div class="flex items-center gap-4 py-3">
+                                <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-red-600 to-red-950 flex items-center justify-center text-white text-2xl font-f1 font-black shadow-lg">
+                                    44
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-f1 font-bold text-white leading-tight">Lewis Hamilton</h3>
+                                    <p class="text-gray-400 text-sm font-racing flex items-center gap-1.5">
+                                        <span class="inline-block w-4 text-center">🇬🇧</span> Scuderia Ferrari • Powered by Ferrari 066/13
+                                    </p>
+                                </div>
+                            </div>
+
+                            <p class="text-sm text-gray-300 italic bg-surfaceLight/60 p-3.5 rounded-lg border border-borderDim/50 mt-2 mb-4">
+                                "The scarlet chapter begins in the defining 2026 regulatory epoch alongside Charles Leclerc. Maranello prepares its high-revving 50/50 electrical split contender."
+                            </p>
+
+                            <div class="flex items-center justify-between text-xs text-gray-400 border-t border-borderDim pt-3 font-mono">
+                                <span>Teammate: <strong>#16 C. Leclerc</strong></span>
+                                <span class="text-emerald-400 flex items-center gap-1"><i class="fa-solid fa-circle-check"></i> Factory Contracted</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grid Filter and Search Controls -->
+    <section id="grid" class="py-12 bg-surface/50 border-b border-borderDim scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+                <div>
+                    <h2 class="font-f1 text-3xl font-extrabold text-white uppercase speed-border pb-2 inline-block">
+                        2026 Drivers & Teams
+                    </h2>
+                    <p class="text-gray-400 text-sm mt-2">Filter the confirmed 2026 starting grid by engine supplier or search driver & team names.</p>
+                </div>
+
+                <!-- Search Input Bar -->
+                <div class="w-full md:w-80 relative">
+                    <input 
+                        type="text" 
+                        id="driverSearch" 
+                        placeholder="Search driver, number, or team..." 
+                        class="w-full bg-surface border border-borderDim rounded-xl px-4 py-2.5 pl-10 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-f1Red transition-colors"
+                        oninput="filterGrid()"
+                    />
+                    <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-gray-500 text-xs"></i>
+                </div>
+            </div>
+
+            <!-- Filter Buttons: Power Unit Manufacturers -->
+            <div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none" id="filterTabs">
+                <button onclick="setFilter('all', this)" class="filter-btn active-tab px-4 py-2 rounded-lg text-sm font-racing font-bold uppercase tracking-wider bg-f1Red text-white transition-all shadow-sm">
+                    All Teams (10)
+                </button>
+                <button onclick="setFilter('Ferrari', this)" class="filter-btn px-4 py-2 rounded-lg text-sm font-racing font-bold uppercase tracking-wider bg-surfaceLight text-gray-300 hover:text-white border border-borderDim transition-all">
+                    Ferrari PU
+                </button>
+                <button onclick="setFilter('Mercedes', this)" class="filter-btn px-4 py-2 rounded-lg text-sm font-racing font-bold uppercase tracking-wider bg-surfaceLight text-gray-300 hover:text-white border border-borderDim transition-all">
+                    Mercedes-AMG PU
+                </button>
+                <button onclick="setFilter('Red Bull Ford', this)" class="filter-btn px-4 py-2 rounded-lg text-sm font-racing font-bold uppercase tracking-wider bg-surfaceLight text-gray-300 hover:text-white border border-borderDim transition-all">
+                    Red Bull Ford
+                </button>
+                <button onclick="setFilter('Honda', this)" class="filter-btn px-4 py-2 rounded-lg text-sm font-racing font-bold uppercase tracking-wider bg-surfaceLight text-gray-300 hover:text-white border border-borderDim transition-all">
+                    Honda (Aston Martin)
+                </button>
+                <button onclick="setFilter('Audi', this)" class="filter-btn px-4 py-2 rounded-lg text-sm font-racing font-bold uppercase tracking-wider bg-surfaceLight text-gray-300 hover:text-white border border-borderDim transition-all">
+                    Audi Works
+                </button>
+                <button onclick="setFilter('Renault', this)" class="filter-btn px-4 py-2 rounded-lg text-sm font-racing font-bold uppercase tracking-wider bg-surfaceLight text-gray-300 hover:text-white border border-borderDim transition-all">
+                    Alpine
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Grid Cards Container -->
+    <main class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div id="gridCards" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Team cards injected via JavaScript to allow seamless filtering & instant modal interaction -->
+        </div>
+
+        <div id="noResults" class="hidden text-center py-16">
+            <i class="fa-solid fa-flag text-4xl text-gray-600 mb-3"></i>
+            <h3 class="text-xl font-f1 text-gray-400">No Drivers or Teams Found</h3>
+            <p class="text-sm text-gray-500">Try modifying your search or power unit filter criteria.</p>
+        </div>
+    </main>
+
+    <!-- Technical Regulations Breakdown Section -->
+    <section id="regulations" class="py-20 bg-surface border-t border-b border-borderDim">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-f1Red font-racing font-bold uppercase text-sm tracking-widest">Formula 1 2026 Technical Revolution</span>
+                <h2 class="font-f1 text-3xl sm:text-4xl font-extrabold text-white mt-2">
+                    How The Cars Change In 2026
+                </h2>
+                <p class="text-gray-400 text-base mt-3">
+                    The 2026 regulations redefine chassis dimensions, powertrain output balance, and aerodynamics, making the cars lighter, narrower, and significantly more electric.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Reg 1 -->
+                <div class="bg-carbon border border-borderDim p-6 rounded-2xl relative overflow-hidden group hover:border-f1Red transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-f1Red/10 text-f1Red flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-plug-circle-bolt"></i>
+                    </div>
+                    <h3 class="font-f1 text-xl font-bold text-white mb-2">50/50 Power Unit Split</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                        The complex MGU-H has been abolished. Electrical generation soars with a 350kW (470hp) MGU-K motor, matching the ~400kW output from the 1.6L turbocharged internal combustion engine.
+                    </p>
+                    <div class="text-xs font-mono text-f1Red flex items-center gap-1.5 font-bold">
+                        <span>300% ELECTRIC OUTPUT JUMP</span>
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                    </div>
+                </div>
+
+                <!-- Reg 2 -->
+                <div class="bg-carbon border border-borderDim p-6 rounded-2xl relative overflow-hidden group hover:border-neonTeal transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-neonTeal/10 text-neonTeal flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-wind"></i>
+                    </div>
+                    <h3 class="font-f1 text-xl font-bold text-white mb-2">Active Aerodynamics</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                        Traditional DRS is augmented by dual-mode active wings: <strong>Z-Mode</strong> for maximum downforce through corners and <strong>X-Mode</strong> low-drag configuration along straightaways to save battery charge.
+                    </p>
+                    <div class="text-xs font-mono text-neonTeal flex items-center gap-1.5 font-bold">
+                        <span>Z-MODE & X-MODE ON DEMAND</span>
+                        <i class="fa-solid fa-sliders"></i>
+                    </div>
+                </div>
+
+                <!-- Reg 3 -->
+                <div class="bg-carbon border border-borderDim p-6 rounded-2xl relative overflow-hidden group hover:border-emerald-500 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h3 class="font-f1 text-xl font-bold text-white mb-2">100% Sustainable Fuel</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                        All power units run strictly on drop-in 100% advanced sustainable e-fuels derived from non-food biowaste or carbon capture, cutting the net carbon footprint of high-performance racing to zero.
+                    </p>
+                    <div class="text-xs font-mono text-emerald-400 flex items-center gap-1.5 font-bold">
+                        <span>NET ZERO CARBON COMBUSTION</span>
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Spec Comparison Grid -->
+            <div class="mt-12 bg-carbon border border-borderDim rounded-2xl p-6 sm:p-8">
+                <h4 class="font-f1 text-lg text-white font-bold mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-table-columns text-f1Red"></i> 2022-2025 vs 2026 Car Specification Comparison
+                </h4>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm text-gray-300">
+                        <thead class="border-b border-borderDim text-xs uppercase font-racing tracking-wider text-gray-400">
+                            <tr>
+                                <th class="pb-3">Parameter</th>
+                                <th class="pb-3">Previous Gen (2022-2025)</th>
+                                <th class="pb-3 text-f1Red font-bold">2026 Regulations</th>
+                                <th class="pb-3">Impact</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-borderDim/50 font-sans">
+                            <tr>
+                                <td class="py-3 font-semibold text-white">Wheelbase</td>
+                                <td class="py-3">3,600 mm max</td>
+                                <td class="py-3 text-emerald-400 font-semibold">3,400 mm max (-200mm)</td>
+                                <td class="py-3 text-xs text-gray-400">Sharper turn-in & agile racing</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 font-semibold text-white">Car Width</td>
+                                <td class="py-3">2,000 mm</td>
+                                <td class="py-3 text-emerald-400 font-semibold">1,900 mm (-100mm)</td>
+                                <td class="py-3 text-xs text-gray-400">Easier wheel-to-wheel overtaking</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 font-semibold text-white">Minimum Weight</td>
+                                <td class="py-3">798 kg</td>
+                                <td class="py-3 text-emerald-400 font-semibold">768 kg (-30kg target)</td>
+                                <td class="py-3 text-xs text-gray-400">Nimbler braking zone dynamics</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 font-semibold text-white">Electrical Output (MGU-K)</td>
+                                <td class="py-3">120 kW (~160 bhp)</td>
+                                <td class="py-3 text-f1Red font-bold">350 kW (~470 bhp)</td>
+                                <td class="py-3 text-xs text-gray-400">Massive acceleration & driver torque mapping</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Blog Articles Section -->
+    <section id="articles" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
+            <div>
+                <span class="text-f1Red font-racing font-bold uppercase text-sm tracking-widest">Paddock Insider Editorial</span>
+                <h2 class="font-f1 text-3xl sm:text-4xl font-extrabold text-white mt-1">
+                    Season Preview & Analysis
+                </h2>
+            </div>
+            <span class="text-gray-400 text-sm">Updated weekly with technical insights & contract whispers</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Article 1 -->
+            <article class="bg-surface rounded-2xl border border-borderDim overflow-hidden flex flex-col group hover:border-gray-500 transition-all">
+                <div class="h-48 bg-gradient-to-tr from-red-900 to-black relative p-6 flex flex-col justify-between">
+                    <span class="self-start px-2.5 py-1 rounded bg-black/60 backdrop-blur-md text-white font-racing font-bold text-xs uppercase tracking-wider">
+                        Driver Transfers
+                    </span>
+                    <i class="fa-solid fa-horse-head text-6xl text-white/10 absolute right-4 bottom-2 pointer-events-none"></i>
+                    <div>
+                        <span class="text-xs font-mono text-red-300">OCTOBER 2026</span>
+                    </div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-f1 text-xl font-bold text-white group-hover:text-f1Red transition-colors mb-2">
+                            Hamilton & Leclerc: Ferrari's Dream Lineup Under the Microscope
+                        </h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                            How Fred Vasseur built Maranello's most star-studded pairing in modern history and what the engineering dynamics look like with two undisputed lead qualifiers.
+                        </p>
+                    </div>
+                    <button onclick="readArticle('hamilton-ferrari')" class="inline-flex items-center gap-2 text-f1Red font-racing font-bold text-sm tracking-wider uppercase hover:underline">
+                        Read Story <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+            </article>
+
+            <!-- Article 2 -->
+            <article class="bg-surface rounded-2xl border border-borderDim overflow-hidden flex flex-col group hover:border-gray-500 transition-all">
+                <div class="h-48 bg-gradient-to-tr from-zinc-800 to-zinc-950 relative p-6 flex flex-col justify-between">
+                    <span class="self-start px-2.5 py-1 rounded bg-black/60 backdrop-blur-md text-white font-racing font-bold text-xs uppercase tracking-wider">
+                        Constructor Debut
+                    </span>
+                    <i class="fa-solid fa-shield-halved text-6xl text-white/10 absolute right-4 bottom-2 pointer-events-none"></i>
+                    <div>
+                        <span class="text-xs font-mono text-gray-400">OCTOBER 2026</span>
+                    </div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-f1 text-xl font-bold text-white group-hover:text-f1Red transition-colors mb-2">
+                            Audi's Factory Arrival: The Neuburg & Hinwil Powerhouse
+                        </h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                            With Nico Hülkenberg bringing experienced composure and rookie phenomenon Gabriel Bortoleto injecting raw speed, can the German giant win on debut?
+                        </p>
+                    </div>
+                    <button onclick="readArticle('audi-entry')" class="inline-flex items-center gap-2 text-f1Red font-racing font-bold text-sm tracking-wider uppercase hover:underline">
+                        Read Story <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+            </article>
+
+            <!-- Article 3 -->
+            <article class="bg-surface rounded-2xl border border-borderDim overflow-hidden flex flex-col group hover:border-gray-500 transition-all">
+                <div class="h-48 bg-gradient-to-tr from-blue-950 to-slate-900 relative p-6 flex flex-col justify-between">
+                    <span class="self-start px-2.5 py-1 rounded bg-black/60 backdrop-blur-md text-white font-racing font-bold text-xs uppercase tracking-wider">
+                        Powertrain Tech
+                    </span>
+                    <i class="fa-solid fa-bolt text-6xl text-white/10 absolute right-4 bottom-2 pointer-events-none"></i>
+                    <div>
+                        <span class="text-xs font-mono text-cyan-400">OCTOBER 2026</span>
+                    </div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-f1 text-xl font-bold text-white group-hover:text-f1Red transition-colors mb-2">
+                            Red Bull Ford Powertrains vs Mercedes vs Honda
+                        </h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                            An exhaustive breakdown of Milton Keynes' first self-built internal combustion power unit in joint venture with Ford and the fight against Brixworth and Sakura.
+                        </p>
+                    </div>
+                    <button onclick="readArticle('engine-wars')" class="inline-flex items-center gap-2 text-f1Red font-racing font-bold text-sm tracking-wider uppercase hover:underline">
+                        Read Story <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Modal for Driver Stats / In-depth Inspection -->
+    <div id="driverModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-surface border border-borderDim w-full max-w-2xl rounded-2xl overflow-hidden shadow-2xl relative animate-in fade-in zoom-in duration-150">
+            <!-- Modal Header -->
+            <div id="modalHeaderBg" class="p-6 relative text-white">
+                <button onclick="closeModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-black/40 hover:bg-black/70 flex items-center justify-center text-white text-base transition">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div class="flex items-center gap-4">
+                    <div id="modalCarNumber" class="text-4xl font-f1 font-black px-4 py-2 bg-black/40 rounded-xl backdrop-blur-md border border-white/20">
+                        --
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span id="modalFlag" class="text-xl"></span>
+                            <span id="modalTeamName" class="text-xs font-racing uppercase tracking-widest text-gray-200"></span>
+                        </div>
+                        <h3 id="modalDriverName" class="text-3xl font-f1 font-bold"></h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Content Body -->
+            <div class="p-6 space-y-6">
+                <!-- Stats Grid -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                    <div class="bg-surfaceLight p-3.5 rounded-xl border border-borderDim text-center">
+                        <span class="text-xs text-gray-400 uppercase font-racing">Grand Prix Starts</span>
+                        <span id="modalStarts" class="block font-f1 text-xl font-bold text-white mt-1">--</span>
+                    </div>
+                    <div class="bg-surfaceLight p-3.5 rounded-xl border border-borderDim text-center">
+                        <span class="text-xs text-gray-400 uppercase font-racing">Career Wins</span>
+                        <span id="modalWins" class="block font-f1 text-xl font-bold text-emerald-400 mt-1">--</span>
+                    </div>
+                    <div class="bg-surfaceLight p-3.5 rounded-xl border border-borderDim text-center">
+                        <span class="text-xs text-gray-400 uppercase font-racing">Podiums</span>
+                        <span id="modalPodiums" class="block font-f1 text-xl font-bold text-yellow-400 mt-1">--</span>
+                    </div>
+                    <div class="bg-surfaceLight p-3.5 rounded-xl border border-borderDim text-center">
+                        <span class="text-xs text-gray-400 uppercase font-racing">World Titles</span>
+                        <span id="modalTitles" class="block font-f1 text-xl font-bold text-f1Red mt-1">--</span>
+                    </div>
+                </div>
+
+                <!-- Driver Bio & 2026 Outlook -->
+                <div>
+                    <h4 class="font-f1 text-sm text-gray-300 uppercase tracking-wider mb-2">2026 Season Outlook</h4>
+                    <p id="modalBio" class="text-gray-300 text-sm leading-relaxed bg-carbon p-4 rounded-xl border border-borderDim font-normal"></p>
+                </div>
+
+                <div class="flex items-center justify-between text-xs text-gray-400 pt-2 border-t border-borderDim">
+                    <span>Power Unit: <strong id="modalEngine">--</strong></span>
+                    <button onclick="closeModal()" class="px-4 py-2 bg-surfaceLight hover:bg-borderDim rounded-lg font-racing uppercase tracking-wider text-white transition">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Article Modal -->
+    <div id="articleModal" class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="bg-surface border border-borderDim w-full max-w-3xl rounded-2xl overflow-hidden shadow-2xl relative max-h-[90vh] flex flex-col">
+            <div class="p-6 border-b border-borderDim flex items-center justify-between bg-surfaceLight">
+                <span class="text-xs font-racing font-bold text-f1Red uppercase tracking-widest">Paddock In-Depth Report</span>
+                <button onclick="closeArticleModal()" class="w-8 h-8 rounded-full bg-carbon hover:bg-borderDim flex items-center justify-center text-white transition">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="p-6 sm:p-8 overflow-y-auto space-y-4">
+                <h2 id="articleModalTitle" class="font-f1 text-2xl sm:text-3xl font-bold text-white"></h2>
+                <div class="flex items-center gap-3 text-xs text-gray-400 font-mono pb-4 border-b border-borderDim">
+                    <span id="articleModalAuthor">By F1 Technical Editorial</span>
+                    <span>•</span>
+                    <span id="articleModalDate">2026 Season Technical Brief</span>
+                </div>
+                <div id="articleModalBody" class="text-gray-300 space-y-4 text-base leading-relaxed"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Newsletter / Subscribe Paddock Club Section -->
+    <section class="carbon-pattern border-t border-borderDim py-16">
+        <div class="max-w-4xl mx-auto px-4 text-center space-y-6">
+            <div class="w-12 h-12 bg-f1Red/20 text-f1Red rounded-full flex items-center justify-center mx-auto text-xl">
+                <i class="fa-solid fa-envelope-open-text"></i>
+            </div>
+            <h2 class="font-f1 text-3xl font-extrabold text-white">Stay In Pole Position</h2>
+            <p class="text-gray-400 text-sm max-w-lg mx-auto">
+                Receive race weekend telemetry summaries, tire degradation breakdowns, and 2026 engine updates straight to your inbox.
+            </p>
+            <form onsubmit="handleSubscribe(event)" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                <input 
+                    type="email" 
+                    id="newsletterEmail" 
+                    required 
+                    placeholder="Enter your paddock email..." 
+                    class="flex-1 bg-surface border border-borderDim rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-f1Red"
+                />
+                <button type="submit" class="bg-f1Red hover:bg-red-700 text-white font-racing font-bold px-6 py-3 rounded-xl tracking-wider uppercase transition shadow-md shadow-f1Red/30">
+                    Subscribe
+                </button>
+            </form>
+            <p id="subscribeMsg" class="hidden text-xs text-emerald-400 font-mono font-medium"></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-surface border-t border-borderDim py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <span class="font-f1 text-lg font-bold text-white tracking-wider">APEX<span class="text-f1Red">.F1</span></span>
+                <span class="text-xs text-gray-500 font-sans">| 2026 Formula 1 Fan & Technical Journal</span>
+            </div>
+            <div class="flex items-center gap-6 text-gray-400 text-sm">
+                <a href="#grid" class="hover:text-white transition">Grid</a>
+                <a href="#regulations" class="hover:text-white transition">Technical Regulations</a>
+                <a href="#articles" class="hover:text-white transition">Articles</a>
+            </div>
+            <p class="text-xs text-gray-500 text-center md:text-right font-sans">
+                Unofficial fan and analytical resource for the 2026 Formula 1 Championship.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Interactive Logic & Grid Data -->
+    <script>
+        // 2026 Complete Teams and Drivers Dataset
+        const f1Data = [
+            {
+                id: "ferrari",
+                team: "Scuderia Ferrari HP",
+                shortTeam: "Ferrari",
+                engine: "Ferrari",
+                engineFull: "Ferrari 066/13 1.6L V6 Turbo Hybrid",
+                color: "#dc0000",
+                badgeBg: "from-red-600 to-red-950",
+                drivers: [
+                    {
+                        name: "Lewis Hamilton",
+                        code: "HAM",
+                        number: 44,
+                        flag: "🇬🇧",
+                        starts: 350,
+                        wins: 105,
+                        podiums: 201,
+                        titles: 7,
+                        bio: "The 7-time World Champion's blockbuster switch to Ferrari marks one of the biggest moves in sports history. Hamilton seeks his historic 8th title in Maranello red under the new 2026 engine and chassis regulations."
+                    },
+                    {
+                        name: "Charles Leclerc",
+                        code: "LEC",
+                        number: 16,
+                        flag: "🇲🇨",
+                        starts: 145,
+                        wins: 8,
+                        podiums: 42,
+                        titles: 0,
+                        bio: "Ferrari's beloved Monegasque speedster continues as the team's core stalwart. Renowned as the fastest qualifier over a single lap, he now battles Hamilton in identical machinery."
+                    }
+                ]
+            },
+            {
+                id: "redbull",
+                team: "Oracle Red Bull Racing",
+                shortTeam: "Red Bull Racing",
+                engine: "Red Bull Ford",
+                engineFull: "Red Bull Ford Powertrains 1.6L V6 Turbo Hybrid",
+                color: "#121f45",
+                badgeBg: "from-blue-900 to-indigo-950",
+                drivers: [
+                    {
+                        name: "Max Verstappen",
+                        code: "VER",
+                        number: 1,
+                        flag: "🇳🇱",
+                        starts: 208,
+                        wins: 63,
+                        podiums: 111,
+                        titles: 4,
+                        bio: "The dominant force of the ground-effect generation heads into the 2026 reset steering the ambitious in-house Red Bull Ford Powertrains project."
+                    },
+                    {
+                        name: "Liam Lawson",
+                        code: "LAW",
+                        number: 30,
+                        flag: "🇳🇿",
+                        starts: 12,
+                        wins: 0,
+                        podiums: 0,
+                        titles: 0,
+                        bio: "The determined New Zealander earned his promotion through exceptional reserve drives, ready to defend Red Bull's Constructors crown alongside Verstappen."
+                    }
+                ]
+            },
+            {
+                id: "mclaren",
+                team: "McLaren Formula 1 Team",
+                shortTeam: "McLaren",
+                engine: "Mercedes",
+                engineFull: "Mercedes-AMG M17 E Performance",
+                color: "#ff8000",
+                badgeBg: "from-amber-600 to-orange-950",
+                drivers: [
+                    {
+                        name: "Lando Norris",
+                        code: "NOR",
+                        number: 4,
+                        flag: "🇬🇧",
+                        starts: 128,
+                        wins: 4,
+                        podiums: 26,
+                        titles: 0,
+                        bio: "Norris has evolved into a relentless Grand Prix winner and McLaren's emotional spearhead, primed to exploit the 2026 aerodynamics shakeup."
+                    },
+                    {
+                        name: "Oscar Piastri",
+                        code: "PIA",
+                        number: 81,
+                        flag: "🇦🇺",
+                        starts: 46,
+                        wins: 2,
+                        podiums: 10,
+                        titles: 0,
+                        bio: "Ice-cool under pressure, the Australian phenom is regarded as one of the most naturally talented champions-in-waiting on the grid."
+                    }
+                ]
+            },
+            {
+                id: "mercedes",
+                team: "Mercedes-AMG PETRONAS F1 Team",
+                shortTeam: "Mercedes",
+                engine: "Mercedes",
+                engineFull: "Mercedes-AMG M17 E Performance",
+                color: "#00d2be",
+                badgeBg: "from-teal-600 to-slate-900",
+                drivers: [
+                    {
+                        name: "George Russell",
+                        code: "RUS",
+                        number: 63,
+                        flag: "🇬🇧",
+                        starts: 128,
+                        wins: 3,
+                        podiums: 15,
+                        titles: 0,
+                        bio: "Taking over the undisputed team-leader mantel at Brackley, Russell's relentless race pace and engineering acumen guide the Silver Arrows' 2026 push."
+                    },
+                    {
+                        name: "Andrea Kimi Antonelli",
+                        code: "ANT",
+                        number: 12,
+                        flag: "🇮🇹",
+                        starts: 0,
+                        wins: 0,
+                        podiums: 0,
+                        titles: 0,
+                        bio: "Mercedes' teenage sensation makes his eagerly anticipated full-season debut. Antonelli's meteoric junior career earns him Lewis Hamilton's former Silver Arrow."
+                    }
+                ]
+            },
+            {
+                id: "astonmartin",
+                team: "Aston Martin Aramco F1 Team",
+                shortTeam: "Aston Martin",
+                engine: "Honda",
+                engineFull: "Honda HRC 2026 Works Hybrid",
+                color: "#229971",
+                badgeBg: "from-emerald-700 to-teal-950",
+                drivers: [
+                    {
+                        name: "Fernando Alonso",
+                        code: "ALO",
+                        number: 14,
+                        flag: "🇪🇸",
+                        starts: 400,
+                        wins: 32,
+                        podiums: 106,
+                        titles: 2,
+                        bio: "Defying time and age, the double world champion reunites with works Honda power and Adrian Newey's technical leadership at Silverstone for 2026 glory."
+                    },
+                    {
+                        name: "Lance Stroll",
+                        code: "STR",
+                        number: 18,
+                        flag: "🇨🇦",
+                        starts: 166,
+                        wins: 0,
+                        podiums: 3,
+                        titles: 0,
+                        bio: "Stroll continues in Aston Martin's ambitious lineup, bringing years of experience as the team transitions to full works status with Honda."
+                    }
+                ]
+            },
+            {
+                id: "audi",
+                team: "Audi Revolut F1 Team",
+                shortTeam: "Audi",
+                engine: "Audi",
+                engineFull: "Audi Formula Racing Works PU",
+                color: "#9ca3af",
+                badgeBg: "from-zinc-500 to-neutral-900",
+                drivers: [
+                    {
+                        name: "Nico Hülkenberg",
+                        code: "HUL",
+                        number: 27,
+                        flag: "🇩🇪",
+                        starts: 227,
+                        wins: 0,
+                        podiums: 0,
+                        titles: 0,
+                        bio: "The consummate qualifying specialist was handpicked by Audi to lead their developmental transition, bringing unmatched setup feedback and grit."
+                    },
+                    {
+                        name: "Gabriel Bortoleto",
+                        code: "BOR",
+                        number: 5,
+                        flag: "🇧🇷",
+                        starts: 0,
+                        wins: 0,
+                        podiums: 0,
+                        titles: 0,
+                        bio: "Reigning F3 champion and F2 star from Brazil, Bortoleto arrives at Audi with fierce backing and devastating raw speed to form their new-era pair."
+                    }
+                ]
+            },
+            {
+                id: "williams",
+                team: "Williams Racing",
+                shortTeam: "Williams",
+                engine: "Mercedes",
+                engineFull: "Mercedes-AMG M17 E Performance",
+                color: "#005aff",
+                badgeBg: "from-blue-600 to-blue-950",
+                drivers: [
+                    {
+                        name: "Carlos Sainz",
+                        code: "SAI",
+                        number: 55,
+                        flag: "🇪🇸",
+                        starts: 205,
+                        wins: 4,
+                        podiums: 25,
+                        titles: 0,
+                        bio: "The strategic Spanish Grand Prix winner embarks on a defining journey at Williams, bringing top-tier race-winning experience from Ferrari to Grove."
+                    },
+                    {
+                        name: "Alexander Albon",
+                        code: "ALB",
+                        number: 23,
+                        flag: "🇹🇭",
+                        starts: 104,
+                        wins: 0,
+                        podiums: 2,
+                        titles: 0,
+                        bio: "Williams' talismanic cornerstone. Albon committed his prime years to Grove, forming one of the most balanced driver pairs on the 2026 grid."
+                    }
+                ]
+            },
+            {
+                id: "alpine",
+                team: "BWT Alpine F1 Team",
+                shortTeam: "Alpine",
+                engine: "Renault",
+                engineFull: "Alpine E-Tech 2026 Hybrid",
+                color: "#0090ff",
+                badgeBg: "from-pink-600 to-sky-950",
+                drivers: [
+                    {
+                        name: "Pierre Gasly",
+                        code: "GAS",
+                        number: 10,
+                        flag: "🇫🇷",
+                        starts: 150,
+                        wins: 1,
+                        podiums: 5,
+                        titles: 0,
+                        bio: "The Monza 2020 victor remains the established leader at Enstone, looking to capitalize on clean-slate aerodynamics for podium resurgence."
+                    },
+                    {
+                        name: "Jack Doohan",
+                        code: "DOO",
+                        number: 7,
+                        flag: "🇦🇺",
+                        starts: 0,
+                        wins: 0,
+                        podiums: 0,
+                        titles: 0,
+                        bio: "Reserve driver elevated to race seat, Doohan brings aggressive racecraft and extensive simulator hours evaluating the 2026 active-aero profiles."
+                    }
+                ]
+            },
+            {
+                id: "vcarb",
+                team: "Visa Cash App RB F1 Team",
+                shortTeam: "Racing Bulls",
+                engine: "Red Bull Ford",
+                engineFull: "Red Bull Ford Powertrains Hybrid",
+                color: "#1634ca",
+                badgeBg: "from-indigo-700 to-slate-900",
+                drivers: [
+                    {
+                        name: "Yuki Tsunoda",
+                        code: "TSU",
+                        number: 22,
+                        flag: "🇯🇵",
+                        starts: 88,
+                        wins: 0,
+                        podiums: 0,
+                        titles: 0,
+                        bio: "Fierce, brave, and deeply fast, Tsunoda enters 2026 with mature consistency and lightning single-lap speed at Faenza."
+                    },
+                    {
+                        name: "Isack Hadjar",
+                        code: "HAD",
+                        number: 6,
+                        flag: "🇫🇷",
+                        starts: 0,
+                        wins: 0,
+                        podiums: 0,
+                        titles: 0,
+                        bio: "Red Bull Junior driver dubbed 'the little Prost' makes his step into the pinnacle of motorsport to contest the revolutionary 2026 campaign."
+                    }
+                ]
+            },
+            {
+                id: "haas",
+                team: "MoneyGram Haas F1 Team",
+                shortTeam: "Haas",
+                engine: "Ferrari",
+                engineFull: "Ferrari 066/13 Customer Specification",
+                color: "#e6002b",
+                badgeBg: "from-red-800 to-neutral-900",
+                drivers: [
+                    {
+                        name: "Esteban Ocon",
+                        code: "OCO",
+                        number: 31,
+                        flag: "🇫🇷",
+                        starts: 154,
+                        wins: 1,
+                        podiums: 4,
+                        titles: 0,
+                        bio: "A proven Grand Prix winner bringing experience and defensive brilliance to Haas under team principal Ayao Komatsu."
+                    },
+                    {
+                        name: "Oliver Bearman",
+                        code: "BEA",
+                        number: 87,
+                        flag: "🇬🇧",
+                        starts: 3,
+                        wins: 0,
+                        podiums: 0,
+                        titles: 0,
+                        bio: "Ferrari protégé who stunned the world on his debut in Jeddah 2024 begins his first complete full-time Formula 1 season."
+                    }
+                ]
+            }
+        ];
+
+        let currentFilter = 'all';
+
+        // Render Cards dynamically
+        function renderGrid(data) {
+            const container = document.getElementById('gridCards');
+            const noResults = document.getElementById('noResults');
+            container.innerHTML = '';
+
+            if (data.length === 0) {
+                noResults.classList.remove('hidden');
+                return;
+            } else {
+                noResults.classList.add('hidden');
+            }
+
+            data.forEach(item => {
+                const card = document.createElement('div');
+                card.className = "bg-surface rounded-2xl border border-borderDim overflow-hidden shadow-lg hover:border-gray-500 transition-all duration-300 flex flex-col justify-between";
+
+                card.innerHTML = `
+                    <div>
+                        <!-- Header Banner -->
+                        <div class="h-3 bg-[${item.color}]" style="background-color: ${item.color}"></div>
+                        <div class="p-6 pb-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs font-mono font-semibold px-2.5 py-0.5 rounded bg-surfaceLight text-gray-300 border border-borderDim">
+                                    <i class="fa-solid fa-gears text-f1Red mr-1"></i> ${item.engine}
+                                </span>
+                                <span class="text-xs text-gray-500 font-mono">2026 SPEC</span>
+                            </div>
+                            <h3 class="font-f1 text-xl font-bold text-white tracking-wide">${item.team}</h3>
+                            <p class="text-xs text-gray-400 font-mono mt-1">${item.engineFull}</p>
+                        </div>
+
+                        <!-- Drivers List inside Team -->
+                        <div class="px-6 py-2 divide-y divide-borderDim/60">
+                            ${item.drivers.map((driver, idx) => `
+                                <div class="py-3 flex items-center justify-between group/d cursor-pointer hover:bg-surfaceLight/40 px-2 rounded-xl transition" onclick="openDriverModal('${item.id}', ${idx})">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-xl bg-carbon border border-borderDim flex items-center justify-center font-f1 font-extrabold text-white group-hover/d:text-f1Red group-hover/d:border-f1Red transition">
+                                            ${driver.number}
+                                        </div>
+                                        <div>
+                                            <div class="flex items-center gap-1.5">
+                                                <span class="text-base">${driver.flag}</span>
+                                                <span class="font-f1 font-bold text-white text-sm group-hover/d:text-f1Red transition">${driver.name}</span>
+                                            </div>
+                                            <span class="text-xs text-gray-400 font-racing uppercase">${driver.titles > 0 ? driver.titles + 'x World Champion' : 'Grand Prix Driver'}</span>
+                                        </div>
+                                    </div>
+                                    <i class="fa-solid fa-chevron-right text-xs text-gray-500 group-hover/d:text-white transition group-hover/d:translate-x-0.5"></i>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+
+                    <div class="p-4 bg-carbon/60 border-t border-borderDim flex items-center justify-between text-xs font-racing text-gray-400 px-6">
+                        <span>LIVERY: <strong class="text-white">${item.shortTeam}</strong></span>
+                        <button onclick="openDriverModal('${item.id}', 0)" class="text-f1Red hover:underline uppercase font-bold tracking-wider">
+                            Inspect Telemetry
+                        </button>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // Set Filter Tabs
+        function setFilter(filter, btn) {
+            currentFilter = filter;
+            document.querySelectorAll('.filter-btn').forEach(b => {
+                b.classList.remove('bg-f1Red', 'text-white');
+                b.classList.add('bg-surfaceLight', 'text-gray-300');
+            });
+            btn.classList.add('bg-f1Red', 'text-white');
+            btn.classList.remove('bg-surfaceLight', 'text-gray-300');
+            filterGrid();
+        }
+
+        // Search & Filter combined
+        function filterGrid() {
+            const query = document.getElementById('driverSearch').value.toLowerCase().trim();
+            
+            let filtered = f1Data.filter(team => {
+                const matchPU = (currentFilter === 'all') || team.engine.toLowerCase().includes(currentFilter.toLowerCase());
+                
+                const matchQuery = !query || 
+                    team.team.toLowerCase().includes(query) ||
+                    team.shortTeam.toLowerCase().includes(query) ||
+                    team.engine.toLowerCase().includes(query) ||
+                    team.drivers.some(d => 
+                        d.name.toLowerCase().includes(query) || 
+                        d.number.toString().includes(query) ||
+                        d.code.toLowerCase().includes(query)
+                    );
+
+                return matchPU && matchQuery;
+            });
+
+            renderGrid(filtered);
+        }
+
+        // Open Driver Modal with complete detail
+        function openDriverModal(teamId, driverIndex) {
+            const team = f1Data.find(t => t.id === teamId);
+            if (!team) return;
+            const driver = team.drivers[driverIndex];
+
+            document.getElementById('modalCarNumber').innerText = driver.number;
+            document.getElementById('modalCarNumber').style.color = team.color;
+            document.getElementById('modalFlag').innerText = driver.flag;
+            document.getElementById('modalTeamName').innerText = team.team;
+            document.getElementById('modalDriverName').innerText = driver.name;
+
+            document.getElementById('modalStarts').innerText = driver.starts;
+            document.getElementById('modalWins').innerText = driver.wins;
+            document.getElementById('modalPodiums').innerText = driver.podiums;
+            document.getElementById('modalTitles').innerText = driver.titles;
+
+            document.getElementById('modalBio').innerText = driver.bio;
+            document.getElementById('modalEngine').innerText = team.engineFull;
+
+            const headerBg = document.getElementById('modalHeaderBg');
+            headerBg.style.backgroundColor = team.color;
+
+            const modal = document.getElementById('driverModal');
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('driverModal').classList.add('hidden');
+        }
+
+        // Article Modal Viewer
+        const articlesData = {
+            'hamilton-ferrari': {
+                title: "Hamilton in Maranello: The High-Stakes Partnership with Charles Leclerc",
+                body: `
+                    <p>The 2026 regulations mark the formal culmination of Lewis Hamilton's monumental arrival in Italy. Wearing the scarlet red of Scuderia Ferrari alongside Charles Leclerc, the pairing represents arguably the most accomplished qualifying and racecraft duo on the grid.</p>
+                    <p>Technically, the 2026 rule reset affords Ferrari an uncompromised fresh sheet of paper. With the removal of the troublesome MGU-H and the mandate for 100% sustainable fuels, Ferrari's combustion specialists in Maranello have spent 30 months running test benches to optimize rapid-flame propagation fuels in conjunction with Shell.</p>
+                    <p>Hamilton's feedback during winter simulator testing has focused extensively on front-axle turn-in responsiveness—an area where the 100mm narrower 2026 chassis will require delicate balance to match Leclerc's aggressive, oversteer-tolerant setup preference.</p>
+                `
+            },
+            'audi-entry': {
+                title: "Inside Audi's F1 Launch: German Engineering Meets Swiss Precision",
+                body: `
+                    <p>Audi's takeover of the Sauber motorsport facility at Hinwil, paired with their dedicated engine development centre at Neuburg an der Donau, finally takes to the track in 2026 as a complete factory outfit.</p>
+                    <p>Nico Hülkenberg was signed early to guide powertrain integration alongside former Ferrari team boss Mattia Binotto. With young Brazilian sensation Gabriel Bortoleto rounding out the roster, Audi possesses an ideal blend of veteran developmental acumen and youthful flair.</p>
+                    <p>Neuburg engineers report that Audi's bespoke 350kW MGU-K electric motor features state-of-the-art silicon carbide inverter technology, aiming to minimize cooling drag through the narrower sidepod apertures permitted by the 2026 chassis regulations.</p>
+                `
+            },
+            'engine-wars': {
+                title: "The 2026 Engine Wars: Ford, Honda, Mercedes, and Ferrari Battle For Supremacy",
+                body: `
+                    <p>For the first time since the turbo-hybrid introduction in 2014, the power unit hierarchy faces total disruption. Red Bull Ford Powertrains enters the fray with an entirely new engine campus in Milton Keynes, backed by Ford's electric motor and battery expertise from Detroit.</p>
+                    <p>Aston Martin steps into full works partner status with Honda, who bring their championship-winning pedigree directly to Lawrence Stroll's newly constructed Silverstone wind tunnel and technology campus under Adrian Newey.</p>
+                    <p>Crucially, with active aerodynamics operating in both high-downforce (Z-Mode) and low-drag (X-Mode), power unit energy management becomes a chess match. Drivers will no longer merely stomp the throttle; automated electrical deployment algorithms will balance charge harvesting and overtaking boosts on straightaways.</p>
+                `
+            }
+        };
+
+        function readArticle(key) {
+            const article = articlesData[key];
+            if (!article) return;
+
+            document.getElementById('articleModalTitle').innerText = article.title;
+            document.getElementById('articleModalBody').innerHTML = article.body;
+            document.getElementById('articleModal').classList.remove('hidden');
+        }
+
+        function closeArticleModal() {
+            document.getElementById('articleModal').classList.add('hidden');
+        }
+
+        // Newsletter handler
+        function handleSubscribe(e) {
+            e.preventDefault();
+            const input = document.getElementById('newsletterEmail');
+            const msg = document.getElementById('subscribeMsg');
+            if (input.value) {
+                msg.innerText = "✓ Welcome to the 2026 Paddock Club dispatch!";
+                msg.classList.remove('hidden');
+                input.value = '';
+                setTimeout(() => {
+                    msg.classList.add('hidden');
+                }, 4000);
+            }
+        }
+
+        // Close modals on escape key or backdrop click
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeModal();
+                closeArticleModal();
+            }
+        });
+
+        document.getElementById('driverModal').addEventListener('click', (e) => {
+            if (e.target.id === 'driverModal') closeModal();
+        });
+
+        document.getElementById('articleModal').addEventListener('click', (e) => {
+            if (e.target.id === 'articleModal') closeArticleModal();
+        });
+
+        // Initial Grid Render on load
+        window.onload = function() {
+            renderGrid(f1Data);
+        };
+    </script>
+</body>
+</html>
